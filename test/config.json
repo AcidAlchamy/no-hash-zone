@@ -1,0 +1,5 @@
+{
+  "protectedPaths": ["/mnt/private", "/Volumes/Private", "D:\\Private", "\\\\nas\\private", "~/Private"],
+  "blockedPatterns": ["(?:^|[\\s/'\"`])hash-everything\\.sh\\b"],
+  "extraHashPatterns": ["\\bmyhasher\\b"]
+}

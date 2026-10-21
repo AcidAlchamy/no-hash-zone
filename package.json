@@ -1,0 +1,14 @@
+{
+  "name": "no-hash-zone",
+  "version": "1.0.0",
+  "description": "Keep AI coding agents from hashing, checksumming or fingerprinting your private files: a Claude Code policy and PreToolUse guard.",
+  "private": true,
+  "license": "Apache-2.0",
+  "repository": "github:AcidAlchamy/no-hash-zone",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/run.mjs"
+  }
+}

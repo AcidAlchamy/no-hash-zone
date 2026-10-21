@@ -1,0 +1,11 @@
+{
+  "protectedPaths": [
+    "/Volumes/Private",
+    "/mnt/private",
+    "D:\\Private",
+    "\\\\nas\\private",
+    "~/Clients"
+  ],
+  "blockedPatterns": [],
+  "extraHashPatterns": []
+}
