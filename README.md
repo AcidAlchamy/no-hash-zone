@@ -8,12 +8,14 @@ are a no-hashing zone, and the guard, a small `PreToolUse` hook, stops any shell
 before it runs. It works on macOS, Linux and Windows and needs nothing but Node.js.
 
 ```text
-Claude wants to run:   rsync -a /Volumes/Private/shoot-0412/ /Volumes/Backup/shoot-0412/
+Claude wants to run:  rsync -a /Volumes/Private/shoot-0412/ /Volumes/Backup/shoot-0412/
 
-Claude Code:           blocked by no-hash-guard
-                       No-hash zone: this command would hash, checksum or fingerprint files in a protected
-                       location (rsync and content-based dedup included). Work from metadata instead (names,
-                       sizes, dates), or ask the owner.
+The guard answers:    deny
+                      "No-hash zone: this command would hash, checksum or fingerprint files in a
+                      protected location (rsync and content-based dedup included). Work from metadata
+                      instead (names, sizes, dates), or ask the owner."
+
+Claude Code doesn't run the command, and Claude reads the reason.
 ```
 
 ## Why a hash is a leak
@@ -217,7 +219,7 @@ node test/run.mjs
 ```
 
 This hands 39 commands to the guard, under the sample config in `test/config.json`, and checks each decision. The
-commands are only text: nothing is executed and nothing is hashed.
+commands are only text: nothing is executed and nothing is hashed. The suite passes on macOS, Linux and Windows.
 
 ## Limits
 
